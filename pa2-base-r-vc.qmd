@@ -208,8 +208,10 @@ ts_vec <- as.vector(ts_mat)
 *Hint:* Use a relational comparison similar to what you used in the last checkpoint, but here you will need to subset values from your vector!
 
 ```{r}
+
 # Write code to verify that indices 500 and beyond have values **below** 100
-___(ts_vec[____:____] >= ____)
+sum(ts_vec[500:955] >= 100)
+
 ```
 
 <!-- Developer Stage your Changes, Commit, and Push to the Git Repository-->
@@ -219,19 +221,25 @@ ___(ts_vec[____:____] >= ____)
 16. Take the square root of all numbers in indices 38 to 465.
 
 ```{r}
-ts_vec[___:___] <- ____(ts_vec[38:465])
+
+ts_vec[38:465] <- sqrt(ts_vec[38:465])
+
 ```
 
 17. Use the `round()` function to round all numbers to the nearest whole number.
 
 ```{r}
-ts_vec <- 
+
+ts_vec <- round(ts_vec, digits = 0)
+
 ```
 
 18. Replace all instances of the number 39 with 20. *Hint:* Step 18 requires another relational comparison, but this time it is equality. Equality in R is checked with a double equal sign rather than a single equal sign
 
 ```{r}
-ts_vec[ts_vec == ___ ] <- 
+
+ts_vec[ts_vec == 39 ] <- 20 
+
 ```
 
 **Checkpoint:** Headquarters has informed you that your final message should have 344 even numbers.
